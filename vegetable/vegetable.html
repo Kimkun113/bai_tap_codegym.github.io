@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá hoa quả</h1>
+    <input type="text" id="qua">
+    <button onclick="check()">Xem giá</button>
+    <p id="result"></p>
+
+</body>
+<script>
+    function check(){
+    let qua=document.getElementById("qua").value;
+    
+    let money;
+    // if(qua=="Ổi"){
+    //     money="20000 VNĐ/kg";
+    // }
+    // else if(qua=="Dưa Hấu"){
+    //     money="20000 VNĐ/kg";
+    // }else if(qua=="Táo:"){
+    //     money="30000 VNĐ/kg";
+    // }else if(qua=="Xoài"){
+    //     money="30000 VNĐ/kg";
+    // }else if(qua=="Cam"){
+    //     money="40000 VNĐ/kg";
+    // }else if(qua=="Chôm Chôm"){
+    //     money="40000 VNĐ/kg";
+    // }else if(qua=="Măng Cụt"){
+    //     money=" 50000 VNĐ/kg";
+
+
+    switch(qua){
+        case "Ổi":
+            money="20000 VNĐ/kg";
+        break;
+        case "Dưa Hấu":
+            money="20000 VNĐ/kg";
+        break;
+        case "Táo":
+            money="30000 VNĐ/kg";
+        break;
+        case "Xoài":
+            money="30000 VNĐ/kg";
+        break;
+        case "Cam":
+            money="40000 VNĐ/kg"
+        break;
+        case "Chôm Chôm":
+            money="40000 VNĐ/kg";
+        break;
+        case "Măng Cụt":
+            money=" 50000 VNĐ/kg";
+        break;
+    
+    }
+     
+
+
+
+
+    document.getElementById("result").innerHTML=money;
+    }
+
+
+
+   
+
+
+    
+
+</script>
+</html>

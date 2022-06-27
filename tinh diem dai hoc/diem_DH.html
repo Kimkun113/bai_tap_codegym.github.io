@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tính điểm ĐH khối D</h1>
+    <form action="">
+    <p>Môn toán <span> <input type="text"  id="toan"></span></p>
+    <p >Môn văn <span> <input type="text" id="van"></span></p>
+    <p >Môn anh <span> <input type="text" id="anh"></span></p>
+    <p>Khu vực 
+        <span> 
+            <select name="khuvuc" id="khuvuc">
+               <option value="KV1">KV1</option>
+                <option value="KV2">KV2</option>
+                <option value="KV2-NT">KV2-NT</option>
+                <option value="KV3">KV3</option>
+            </select>
+    </span>
+</p>
+<button onclick="score()">Tính điểm</button>
+<p id="result"> </p>
+</form>
+
+</body>
+<script>
+    function score(){
+
+ 
+    let toan=+document.getElementById("toan").value;
+    let van=+document.getElementById("van").value;
+    let anh=+document.getElementById("anh").value;
+    let khuvuc=document.getElementById("khuvuc").value;
+    let diem3mon= toan + van + anh;
+    let tongdiem= diem3mon + khuvuc ;
+    if(khuvuc=="KV1"){
+            tongdiem= diem3mon + 0.75;   
+            document.write(tongdiem)  ;
+    }else if (khuvuc =="KV2-NT") {
+            tongdiem= diem3mon + 0.5;
+            document.write(tongdiem) ;
+    }else if(khuvuc == "KV2") {
+            tongdiem= diem3mon + 0.25;
+            document.write(tongdiem)
+    }else if(khuvuc == "KV3") {
+            tongdiem= diem3mon ;
+            document.write(tongdiem)
+    }
+            
+        
+      
+    }
+    // switch(khuvuc){
+    //     case khuvuc=="KV1":
+    //             tongdiem = diem3mon + 0.75;
+    //         document.write(tongdiem);
+    //         break;
+    //         case 2:
+    //         khuvuc="KV2-NT";
+    //         tongdiem = diem3mon + 0.5;
+    //         break;
+    //         case 3:
+    //         khuvuc="KV2";
+    //         tongdiem = diem3mon +0.25;
+    //         break;
+    //         case 4:
+    //         khuvuc="KV3";
+    //         tongdiem=diem3mon;
+    //         break;
+    //         document.getElementById("result").innerHTML=tongdiem;
+    // }
+   
+
+
+
+   
+    // }else if(khuvuc=="KV2"){
+
+    //         tongdiem= toan + van + anh + 0.25;
+    //         document.write(tongdiem);
+    // }else (khuvuc=="KV3"){
+
+//             tongdiem= toan + van + anh + 0;
+//             document.write(tongdiem);
+//     }
+    
+// }
+
+</script>
+</html>
